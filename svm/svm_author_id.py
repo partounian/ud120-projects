@@ -25,7 +25,7 @@ from sklearn.metrics import accuracy_score
 features_train = features_train[:len(features_train)/100] 
 labels_train = labels_train[:len(labels_train)/100] 
 
-clf = SVC(kernel='linear')
+clf = SVC(kernel='rbf', C=10000)
 
 t0 = time()
 clf.fit(features_train, labels_train) 
