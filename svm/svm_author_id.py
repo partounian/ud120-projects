@@ -19,12 +19,19 @@ from email_preprocess import preprocess
 ### labels_train and labels_test are the corresponding item labels
 features_train, features_test, labels_train, labels_test = preprocess()
 
+from sklearn.svm import SVC
+from sklearn.metrics import accuracy_score
 
+clf = SVC(kernel='linear')
 
+t0 = time()
+clf.fit(features_train, labels_train) 
+print "training time:", round(time()-t0, 3), "s"
+# training time: 234.423s  
 
-#########################################################
-### your code goes here ###
+t0 = time()
+pred = clf.predict(features_test)
+print "prediction time:", round(time()-t0, 3), "s"
+# prediction time: 21.846s
 
-#########################################################
-
-
+print accuracy_score(labels_test, pred)
