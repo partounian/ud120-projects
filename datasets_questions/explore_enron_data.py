@@ -19,4 +19,5 @@ import pickle
 
 enron_data = pickle.load(open("../final_project/final_project_dataset.pkl", "r"))
 
+print 'Number of people in the Enron dataset: {0}'.format(len(enron_data))
 
