@@ -25,3 +25,5 @@ print 'Number of features per person: {0}'.format(len(enron_data.values()[0]))
 
 pois = [x for x, y in enron_data.items() if y['poi']]
 print 'Number of POIs: {0}'.format(len(pois))
+
+print enron_data["PRENTICE JAMES"]["total_stock_value"]
