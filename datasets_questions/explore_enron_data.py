@@ -27,3 +27,5 @@ pois = [x for x, y in enron_data.items() if y['poi']]
 print 'Number of POIs: {0}'.format(len(pois))
 
 print enron_data["PRENTICE JAMES"]["total_stock_value"]
+
+print enron_data["COLWELL WESLEY"]["from_this_person_to_poi"]
