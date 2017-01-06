@@ -42,3 +42,6 @@ print 'Number of people with email addresses: {0}'.format(len(with_emails))
 
 with_total_payments = [x for x, y in enron_data.items() if y['total_payments'] == 'NaN']
 print 'Number of people with total payments: {0}'.format(len(with_total_payments))
+
+with_total_payments_and_poi = [x for x, y in enron_data.items() if y['total_payments'] == 'NaN' and y['poi']]
+print 'Number of POIs with total payments: {0}'.format(len(with_total_payments_and_poi))
