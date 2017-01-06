@@ -39,3 +39,6 @@ print 'Number of people with quantified salaries: {0}'.format(len(with_salaries)
 
 with_emails = [x for x, y in enron_data.items() if y['email_address'] != 'NaN']
 print 'Number of people with email addresses: {0}'.format(len(with_emails))
+
+with_total_payments = [x for x, y in enron_data.items() if y['total_payments'] == 'NaN']
+print 'Number of people with total payments: {0}'.format(len(with_total_payments))
